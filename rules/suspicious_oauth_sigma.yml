@@ -1,65 +1,54 @@
-title: Suspicious OAuth Application Consent Detection
+title: Suspicious OAuth Application Consent
 
-
-id: fintech-003
-
+id: fintech-oauth-001
 
 status: experimental
 
 
 description:
-
- Detects suspicious OAuth applications requesting dangerous permissions.
+  Detects OAuth applications requesting dangerous permissions.
 
 
 author:
-
- SIEM Engineer
+  SIEM Engineer
 
 
 logsource:
 
- category:
-
-  cloud_identity
-
+  product: azure
+  service: auditlogs
 
 
 detection:
 
 
- selection:
+  selection:
+
+    OperationName:
+      - "Consent to application"
 
 
-  event:
+    Permission:
 
-   - oauth_consent_granted
-
-
-  permission:
-
-   - admin
-   - mail.read
-   - files.read
+      - "Mail.ReadWrite"
+      - "offline_access"
+      - "Files.ReadWrite"
 
 
 
- condition:
+  condition:
 
-
-  selection
+    selection
 
 
 
 level:
 
-
- high
-
+  high
 
 
 tags:
 
+  - attack.t1098
 
- - attack.t1098
- - account-manipulation
+
