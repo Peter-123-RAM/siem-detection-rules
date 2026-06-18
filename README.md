@@ -36,3 +36,19 @@ Each rule includes:
 ## AI Usage
 
 AI was used to improve documentation structure, explain detection logic, and review clarity. The detection ideas and validation approach were developed by me.
+
+
+## Validation Evidence
+
+Each detection includes:
+
+- Sigma YAML rule
+- True positive attack simulation
+- Benign activity test
+- Expected SIEM result
+- Production tuning notes
+
+
+Validation approach:
+
+Rules were tested against structured JSON event samples representing attacker and normal user behaviour.
