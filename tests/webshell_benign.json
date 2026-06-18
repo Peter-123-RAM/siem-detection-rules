@@ -1,0 +1,14 @@
+{
+"ParentImage":"apache2",
+
+"Image":"php-fpm",
+
+"CommandLine":
+"serve index.php",
+
+"Scenario":
+"Normal web application request",
+
+"Expected":
+"NO ALERT"
+}
