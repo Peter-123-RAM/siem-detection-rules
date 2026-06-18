@@ -1,14 +1,14 @@
 {
 "ParentImage":"apache2",
 
-"Image":"php-fpm",
+"Image":"/bin/sh",
 
 "CommandLine":
-"serve index.php",
+"/usr/bin/cgi-script.sh",
 
 "Scenario":
-"Normal web application request",
+"Legitimate CGI maintenance script executed by approved web service",
 
 "Expected":
-"NO ALERT"
+"NO ALERT after allowlist validation"
 }
