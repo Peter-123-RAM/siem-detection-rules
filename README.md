@@ -52,3 +52,24 @@ Each detection includes:
 Validation approach:
 
 Rules were tested against structured JSON event samples representing attacker and normal user behaviour.
+
+## Example Sigma Detection Logic
+
+Credential Stuffing:
+
+```yaml
+detection:
+
+ selection:
+  EventID: 4625
+  Status: "0xC000006A"
+
+
+ condition:
+
+  selection | count(distinct TargetUserName) > 10 by IpAddress
+
+
+ timeframe:
+
+  5m
