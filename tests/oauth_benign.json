@@ -8,8 +8,11 @@
 "Permission":
 "User.Read",
 
+"AdminApproved":
+true,
+
 "Scenario":
-"Approved business SaaS application",
+"Approved enterprise SaaS application with normal permissions",
 
 "Expected":
 "NO ALERT"
