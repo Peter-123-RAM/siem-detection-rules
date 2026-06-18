@@ -73,3 +73,41 @@ detection:
  timeframe:
 
   5m
+
+## Detection Execution Evidence
+
+The detection rules were validated using a Python test harness that replayed malicious and benign security events.
+
+Execution:
+
+python tests/run_detection_tests.py
+
+
+Expected Output:
+
+
+Credential Stuffing TP:
+True
+
+
+Credential Stuffing FP:
+False
+
+
+Web Shell TP:
+True
+
+
+Web Shell FP:
+False
+
+
+OAuth TP:
+True
+
+
+OAuth FP:
+False
+
+
+The test confirms that each detection fires on attacker behaviour and remains quiet on benign activity.
