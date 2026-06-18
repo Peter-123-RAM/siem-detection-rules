@@ -1,13 +1,11 @@
-title: Web Shell Execution Detection
+title: Web Server Spawning Command Shell
 
-id: fintech-002
+id: fintech-webshell-001
 
 status: experimental
 
-
 description:
-  Detects possible web shell activity when web servers execute command shells.
-
+  Detects possible web shell execution when web services spawn command interpreters.
 
 author:
   SIEM Engineer
@@ -15,25 +13,21 @@ author:
 
 logsource:
 
-  category:
-    process_creation
+  product: linux
+  category: process_creation
 
 
 detection:
 
-
   selection:
 
-    parent_process:
-      - apache
+    ParentImage:
+      - apache2
       - nginx
 
-
-    child_process:
-
-      - bash
-      - sh
-      - cmd
+    Image:
+      - /bin/bash
+      - /bin/sh
 
 
   condition:
@@ -41,14 +35,11 @@ detection:
     selection
 
 
-
 level:
 
   critical
 
 
-
 tags:
 
   - attack.t1505.003
-  - persistence
