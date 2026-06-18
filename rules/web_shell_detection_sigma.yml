@@ -1,0 +1,54 @@
+title: Web Shell Execution Detection
+
+id: fintech-002
+
+status: experimental
+
+
+description:
+  Detects possible web shell activity when web servers execute command shells.
+
+
+author:
+  SIEM Engineer
+
+
+logsource:
+
+  category:
+    process_creation
+
+
+detection:
+
+
+  selection:
+
+    parent_process:
+      - apache
+      - nginx
+
+
+    child_process:
+
+      - bash
+      - sh
+      - cmd
+
+
+  condition:
+
+    selection
+
+
+
+level:
+
+  critical
+
+
+
+tags:
+
+  - attack.t1505.003
+  - persistence
