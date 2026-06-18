@@ -1,0 +1,16 @@
+{
+"OperationName":
+"Consent to application",
+
+"Application":
+"Microsoft Teams",
+
+"Permission":
+"User.Read",
+
+"Scenario":
+"Approved business SaaS application",
+
+"Expected":
+"NO ALERT"
+}
