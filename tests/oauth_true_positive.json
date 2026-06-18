@@ -1,0 +1,16 @@
+{
+"OperationName":
+"Consent to application",
+
+"Application":
+"Unknown-Finance-App",
+
+"Permission":
+"Mail.ReadWrite",
+
+"Scenario":
+"Malicious OAuth consent attempt",
+
+"Expected":
+"ALERT"
+}
